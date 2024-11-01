@@ -1,0 +1,26 @@
+<div class="bien">
+    <h1>Lista de Clientes</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Dirección</th>
+          <th>Ubicación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.nombre }} {{ cliente.apellidos }}</td>
+          <td>Calle {{ cliente.calle }} {{ cliente.nExt }} colonia {{ cliente.colonia }}, {{ cliente.municipio }}</td>
+          <td style="text-align: center;">
+            <a href="#" class="ubicacion-icono" (click)="trazarRuta(cliente.direccion)">
+              <img src="assets/img/ubica.png" style="width: 40px; display: block; margin: 0 auto;">
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="map" style="height: 500px; width: 100%; margin-top: 30px;"></div>
+  

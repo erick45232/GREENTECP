@@ -1,0 +1,50 @@
+<div class="bien">
+    <h1>Catálogo</h1>
+    <br>
+    <div class="table-container">
+        <table id="catalogTable">
+            <thead>
+                <tr>
+                    <th>Dispositivo<br><input type="text" [(ngModel)]="filters.dispositivo" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                    <th>Tipo<br><input type="text" [(ngModel)]="filters.tipo" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                    <th>Marca<br><input type="text" [(ngModel)]="filters.marca" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                    <th>Modelo<br><input type="text" [(ngModel)]="filters.modelo" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                    <th>Pago por Kg<br><input type="text" [(ngModel)]="filters.preciokg" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                    <th>Gestión de Catálogo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let precio of filteredPrecios">
+                    <td>{{ precio.modelo.marca.tipo.dispositivo.nombre }}</td>
+                    <td>{{ precio.modelo.marca.tipo.tipo }}</td>
+                    <td>{{ precio.modelo.marca.nombre }}</td>
+                    <td>{{ precio.modelo.nombre }}</td>
+                    <td>{{ precio.preciokg }}</td>
+                    <td>
+                        <button class="buttonEdit" (click)="editarPrecio(precio.id)">
+                            <img src="assets/img/EditarCat.png" style="width: 32px; float: left;"> Editar
+                        </button>
+                        <button class="buttonElim" (click)="eliminarPrecio(precio.id)">
+                            <img src="assets/img/ElimiarCat.png" style="width: 32px; float: left;"> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="contadd">
+        <button class="buttonAdd" (click)="agregarDispositivo()">
+            <img src="assets/img/Dispositivos.png" style="width: 40px; float: left;"> Agregar Dispositivo
+        </button>
+        <button class="buttonAdd" (click)="agregarTipo()">
+            <img src="assets/img/tipo.png" style="width: 40px; float: left;"> Agregar Tipo
+        </button>
+        <button class="buttonAdd" (click)="agregarMarca()">
+            <img src="assets/img/marca.png" style="width: 40px; float: left;"> Agregar Marca
+        </button>
+        <button class="buttonAdd" (click)="agregarModelo()">
+            <img src="assets/img/modelos.png" style="width: 40px; float: left;"> Agregar Modelo
+        </button>
+    </div>
+</div>
+

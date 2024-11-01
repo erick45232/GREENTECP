@@ -1,0 +1,53 @@
+<html>
+    <div class="bien">
+        <h1>Lista de Clientes</h1>
+        <br>
+        <div class="table-container">
+          <table border="1" id="catalogTable">
+            <thead>
+              <tr>
+                <th>Nombre<br><input type="text" [(ngModel)]="filters.nombre" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Apellidos<br><input type="text" [(ngModel)]="filters.apellidos" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Edad<br><input type="text" [(ngModel)]="filters.edad" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Sexo<br><input type="text" [(ngModel)]="filters.sexo" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Estado<br><input type="text" [(ngModel)]="filters.estado" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Municipio<br><input type="text" [(ngModel)]="filters.municipio" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>CP<br><input type="text" [(ngModel)]="filters.cp" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Calle<br><input type="text" [(ngModel)]="filters.calle" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Número Exterior<br><input type="text" [(ngModel)]="filters.nExt" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Número Interior<br><input type="text" [(ngModel)]="filters.nInt" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Colonia<br><input type="text" [(ngModel)]="filters.colonia" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Correo<br><input type="text" [(ngModel)]="filters.correo" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Teléfono<br><input type="text" [(ngModel)]="filters.telefono" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                <th>Referencias</th>
+                <th>Gestión de Empleados</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cliente of filteredClientes">
+                <td>{{ cliente.nombre }}</td>
+                <td>{{ cliente.apellidos }}</td>
+                <td>{{ cliente.edad }}</td>
+                <td>{{ cliente.sexo }}</td>
+                <td>{{ cliente.estado }}</td>
+                <td>{{ cliente.municipio }}</td>
+                <td>{{ cliente.cp }}</td>
+                <td>{{ cliente.calle }}</td>
+                <td>{{ cliente.nExt }}</td>
+                <td>{{ cliente.nInt }}</td>
+                <td>{{ cliente.colonia }}</td>
+                <td>{{ cliente.correo }}</td>
+                <td>{{ cliente.telefono }}</td>
+                <td>{{ cliente.referencias }}</td>
+                <td>
+                  <button class="buttonElim" (click)="eliminarCliente(cliente.id)">
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+</html>

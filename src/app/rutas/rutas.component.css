@@ -1,0 +1,56 @@
+.bien {
+    width: 800px;
+    height: 600px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px rgb(105, 105, 105);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .credencial {
+    border: 2px solid #3498db;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #3498db;
+    font-family: "Freeman", sans-serif;
+    font-size: 55px;
+    color: rgb(0, 0, 0);
+  }
+  
+  p {
+    color: black;
+    font-size: large;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    text-align: justify;
+  }
+  
+  table {
+    width: 70%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: justify;
+  }
+  
+  th {
+    font-family: "Freeman", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  td {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+  }
+  

@@ -1,0 +1,106 @@
+.bien {
+    width: 1500px;
+    height: 900px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px rgb(105, 105, 105);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.table-container {
+    max-height: 700px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: justify;
+}
+
+th {
+    font-family: "Freeman", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.buttonEdit, .buttonElim, .buttonAdd {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Poetsen One", sans-serif;
+    margin: 2px;
+}
+
+.buttonEdit {
+    background-color: #393be4;
+}
+.buttonEdit:hover {
+    background-color: #2a2dac;
+}
+.buttonEdit:active {
+    background-color: #171861;
+}
+
+.buttonElim {
+    background-color: #ec3b3b;
+}
+.buttonElim:hover {
+    background-color: #942525;
+}
+.buttonElim:active {
+    background-color: #5f1717;
+}
+
+.buttonAdd {
+    background-color: #75b82e;
+    width: 200px;
+}
+.buttonAdd:hover {
+    background-color: #588a22;
+}
+.buttonAdd:active {
+    background-color: #345214;
+}
+
+.contadd {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+h1 {
+    font-family: "Freeman", sans-serif;
+}
+
+input[type="text"], select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}

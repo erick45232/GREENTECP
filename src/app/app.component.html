@@ -1,0 +1,41 @@
+<router-outlet>
+<ng-container *ngIf="router.url !== '/login' && router.url !== '/LoginEmpleado' && router.url !== '/LoginAdmin'">
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/Greentec.png" alt="">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a>¿Quiénes somos?</a></li>
+        <li><a>Servicios</a></li>
+        <li><a>Beneficios</a></li>
+        <li><a>Ubicación</a></li>
+      </ul>
+
+    </nav>
+    <a class="btn" (click)="goToLogin()"><button>Iniciar Sesión</button></a>
+    <a class="btn" ><button>Registrarte</button></a>
+  </header>
+
+  <div class="parrafo">
+    <h1>¿Quiénes somos?</h1>
+    <br>
+
+    <p>
+      Somos GreenTec, una empresa Mexicana, líderes en el reciclaje de equipos electrónicos en México.
+      Nuestra misión es simple pero poderosa: Concientizar sobre la importancia del reciclaje y
+      la economía circular para combatir el cambio climático. Juntos, reducimos, reutilizamos y
+      reciclamos para un futuro más verde y próspero.
+    </p>
+
+  </div>
+
+  <div class="imagen">
+    <img src="assets/img/Greentec.png" alt="50px">
+  </div>
+
+  <!-- Vinculamos el script como un archivo estático de assets -->
+
+</ng-container>
+
+</router-outlet>

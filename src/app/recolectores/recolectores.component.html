@@ -1,0 +1,51 @@
+<html>
+    <div class="bien">
+        <h1>Lista de Recolectores</h1>
+        <br>
+        <div class="table-container">
+            <table border="1" id="catalogTable">
+                <thead>
+                    <tr>
+                        <th>Nombre<br><input type="text" [(ngModel)]="filters.nombre" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Apellidos<br><input type="text" [(ngModel)]="filters.apellidos" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Edad<br><input type="text" [(ngModel)]="filters.edad" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Sexo<br><input type="text" [(ngModel)]="filters.sexo" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Correo<br><input type="text" [(ngModel)]="filters.correo" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Departamento<br><input type="text" [(ngModel)]="filters.departamento" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Puesto<br><input type="text" [(ngModel)]="filters.puesto" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Fecha de Ingreso<br><input type="text" [(ngModel)]="filters.fecha" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Número de Teléfono<br><input type="text" [(ngModel)]="filters.num_telefono" (keyup)="applyFilters()" placeholder="Filtrar..."></th>
+                        <th>Gestión de Empleados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let empleado of filteredEmpleados">
+                        <td>{{ empleado.nombre }}</td>
+                        <td>{{ empleado.apellidos }}</td>
+                        <td>{{ empleado.edad }}</td>
+                        <td>{{ empleado.sexo }}</td>
+                        <td>{{ empleado.correo }}</td>
+                        <td>{{ empleado.departamento }}</td>
+                        <td>{{ empleado.puesto }}</td>
+                        <td>{{ empleado.fecha | date: 'd MMM yyyy H:mm' }}</td>
+                        <td>{{ empleado.num_telefono }}</td>
+                        <td>
+                            <button class="buttonEdit" (click)="editarEmpleado(empleado.id)">
+                                Editar
+                            </button>
+                            <button class="buttonElim" (click)="eliminarEmpleado(empleado.id)">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="contadd">
+            <button class="buttonAdd" (click)="registrarEmpleado()">
+                Añadir
+            </button>
+        </div>
+    </div>
+    
+</html>
